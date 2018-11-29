@@ -3,7 +3,7 @@ version: '3.7'
 services:
   web:
     build: ./
-    command: gunicorn supermarket.wsgi:application --bind 0.0.0.0:8000
+    command: gunicorn supermarket.wsgi:application --bind 0.0.0.0:8000 --reload
     volumes:
       - ./app/:/usr/src/app/
       - static_volume:/usr/src/app/staticfiles
